@@ -150,7 +150,7 @@ function runParallax() {
   if (aboutCard) {
     const rect = aboutCard.getBoundingClientRect();
     const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.10;
-    aboutCard.style.transform = `rotate(4deg) translateY(${-offset}px)`;
+    aboutCard.style.transform = `translateY(${-offset}px)`;
   }
 
   document.querySelectorAll('.section-title, .contact-title, .about-title').forEach(el => {
