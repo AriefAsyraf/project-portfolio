@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Design Munich | UI/UX &amp; Websites – 'Arief Asyraf</title>
+  <meta name="description" content="Web design and UI/UX design in Munich for modern, responsive websites and clean digital experiences for startups, freelancers and local businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Poppins:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</head>
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <canvas id="noise-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav-animate">
+    <a href="#hero" class="nav-logo">'Arief Asyraf</a>
+    <ul class="nav-links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleSidebar()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+  <div class="sidebar" id="sidebar">
+    <a href="#about" onclick="closeSidebar()">About Me <i class="fa-solid fa-arrow-up-right"></i></a>
+    <a href="#projects" onclick="closeSidebar()">Projects <i class="fa-solid fa-arrow-up-right"></i></a>
+    <a href="#services" onclick="closeSidebar()">Services <i class="fa-solid fa-arrow-up-right"></i></a>
+    <a href="#faq" onclick="closeSidebar()">FAQ <i class="fa-solid fa-arrow-up-right"></i></a>
+    <a href="#contact" onclick="closeSidebar()">Contact <i class="fa-solid fa-arrow-up-right"></i></a>
+    <div class="sidebar-footer">'Arief Asyraf &mdash; Malaysia</div>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-eyebrow hero-animate-eyebrow">
+      <span class="dot"></span>
+      Available for projects
+    </div>
+    <h1 class="hero-title hero-animate-title">CODE. DATA. PRODUCTS.</h1>
+    <p class="hero-subtitle hero-animate-sub">I write the code behind products that feel effortless. Clean architecture, sharp insights, and systems built to last.</p>
+    <div class="hero-actions hero-animate-actions">
+      <a href="#about" class="btn-primary">
+        About Me <i class="fa-solid fa-arrow-down-long"></i>
+      </a>
+      <a href="#contact" class="btn-secondary">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-content">
+          <span class="section-label">About Me</span>
+          <h2 class="about-title">
+            Started with curiosity.<br>
+            <span>Still haven't stopped.</span>
+          </h2>
+          <p class="about-body">I'm Arief, a developer and data guy from Malaysia who's been deep in tech since my uni days in 2021. Hackathons, bootcamps, Coursera rabbit holes at 2am. If there's something new to learn, I'm probably already halfway through it.</p>
+          <p class="about-body">By day I work as a Data Analyst and Data Engineer. By night I'm building full-stack apps, exploring what AI can actually do, and freelancing on the side. Frontend is where I feel most at home, but I'm just as comfortable in the backend and slowly making data my third language.</p>
+          <p class="about-body">I'm not an expert in everything. But I'm genuinely curious about all of it and I think that counts for something.</p>
+          <div class="about-badge">
+            <i class="fa-solid fa-rocket" style="color: var(--accent); font-size: 14px;"></i>
+            Hackathons · Bootcamps · Always Learning
+          </div>
+        </div>
+        <div class="about-img-wrap">
+          <div class="about-img-card">
+            <img src="./images/profile.png" alt="'Arief Asyraf">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="projects-header">
+        <span class="section-label">Selected Work</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-desc">Selected projects that show how ideas turn into clear, functional, and visually refined digital experiences. From concept and layout to responsive execution, each case focuses on usability, atmosphere, and purpose.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <button class="project-card" onclick="openModal(0)">
+          <div class="project-img-wrap" style="background:#f0ede8;">
+            <img
+              src="./images/project-onion.png"
+              alt="Project Onion app"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);"
+              class="project-img">
+          </div>
+          <div class="project-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">OpenAI</span>
+            </div>
+            <h3 class="project-name">Project Onion</h3>
+            <p class="project-desc">A live community app where AI generates daily questions across 5 categories — and real people give their honest takes.</p>
+          </div>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header">
+        <div>
+          <span class="section-label">What I offer</span>
+          <h2 class="section-title">What I can build for you.</h2>
+          <p class="section-desc">Got an idea? I help startups, small businesses, and individuals turn it into something real — from first line of code to launch.</p>
+        </div>
+        <a href="#contact" class="btn-primary" style="white-space:nowrap; align-self:flex-end;">
+          Start a project <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="services-grid" style="grid-template-columns: repeat(4, 1fr);">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3 class="service-name">Web &amp; App Development</h3>
+          <p class="service-desc">Full-stack web apps and websites built clean, fast, and ready to scale. From landing pages to fully custom platforms.</p>
+          <p style="margin-top:14px; font-size:12px; color:var(--text-light); font-family:var(--font-ui);">Next.js · Laravel · Supabase</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3 class="service-name">AI Integration</h3>
+          <p class="service-desc">Plug AI into your product — chatbots, content generation, automation, smart features. If you can imagine it, we can build it.</p>
+          <p style="margin-top:14px; font-size:12px; color:var(--text-light); font-family:var(--font-ui);">OpenAI · Python</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="service-name">Data &amp; Dashboards</h3>
+          <p class="service-desc">Turn your raw data into something you can actually use. Custom dashboards, reports, and pipelines that make decisions easier.</p>
+          <p style="margin-top:14px; font-size:12px; color:var(--text-light); font-family:var(--font-ui);">Python · SQL · Neon</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3 class="service-name">Idea to Product</h3>
+          <p class="service-desc">Don't have a tech team? No problem. I'll take your idea from concept to a working product, handling the full build solo.</p>
+          <p style="margin-top:14px; font-size:12px; color:var(--text-light); font-family:var(--font-ui);">Full Stack · End to End</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="faq-left">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">Things people<br>usually ask.</h2>
+          <p class="section-desc">Answers to common questions about working with me, how I build, and what to expect.</p>
+        </div>
+
+        <div class="faq-list">
+
+          <div class="faq-item open">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              01. What does your process look like?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">We start by getting aligned. I'll gather your requirements, understand what you're building and why, then we settle on the right stack together. Being on the same page from day one saves a lot of back and forth later.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              02. How long does a project take?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Most projects take about a month from start to launch. That includes the build, feedback rounds, bug fixes, and small tweaks. Bigger or more complex work may take longer but we'll agree on a timeline upfront.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              03. Where are you based? Can you work with me?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">I'm based in Malaysia but work fully remote. Timezone, location, none of that is a barrier. If you have an idea and an internet connection, we can work together.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              04. How does payment work?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">I take a deposit upfront to kick things off, and the remaining balance is due once the project is delivered. Simple and fair for both sides.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              05. What do you need before we start?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">A clear brief goes a long way — what you want to build, who it's for, and any references help. That said, requirements can evolve and I'm flexible enough to adjust along the way.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              06. What kind of projects do you take?
+              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">I'm open to most things — web apps, websites, dashboards, AI integrations. The one thing I'm upfront about is I work best on projects that aren't overly complex from the start. Good things take time, and I'd rather do one thing well than rush something big.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-left">
+          <div class="contact-eyebrow">Contact</div>
+          <h2 class="contact-title">Got an idea?</h2>
+          <p class="contact-subtitle">Whether it's a half-baked idea or a fully thought-out project, I'm down to hear it. Drop me a message and let's figure it out together.</p>
+          <div class="contact-links">
+            <a href="mailto:mariefasyraf03@gmail.com" class="contact-link">
+              <i class="fa-solid fa-envelope"></i>
+              mariefasyraf03@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/arief-asyraf/" target="_blank" rel="noopener" class="contact-link">
+              <i class="fa-brands fa-linkedin"></i>
+              linkedin.com/in/arief-asyraf
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div id="fs-success" style="display:none; text-align:center; padding: 48px 0;">
+            <div style="font-size:40px; margin-bottom:16px;">🎉</div>
+            <h3 style="font-family:var(--font-heading); font-size:24px; color:#fff; margin-bottom:8px;">Message sent!</h3>
+            <p style="color:rgba(255,255,255,0.55); font-size:15px;">I'll get back to you as soon as I can.</p>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div data-fs-error style="color:#ff6b6b; font-size:13px; margin-bottom:8px; display:none;"></div>
+            <div class="form-group">
+              <label class="form-label">Your name</label>
+              <input type="text" class="form-input" placeholder="Ahmad Arif" name="name" data-fs-field required>
+              <span data-fs-error="name" style="color:#ff6b6b; font-size:12px;"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your email</label>
+              <input type="email" class="form-input" placeholder="you@example.com" name="email" data-fs-field required>
+              <span data-fs-error="email" style="color:#ff6b6b; font-size:12px;"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your message</label>
+              <textarea class="form-textarea" placeholder="Tell me about your idea..." name="message" data-fs-field required></textarea>
+              <span data-fs-error="message" style="color:#ff6b6b; font-size:12px;"></span>
+            </div>
+            <button type="submit" class="btn-submit" data-fs-submit-btn>
+              Send it <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal-overlay" onclick="closeModalOnOverlay(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-img-wrap">
+        <img id="modal-img" class="modal-img" src="" alt="">
+      </div>
+      <div class="modal-body">
+        <div id="modal-tags" class="project-tags"></div>
+        <h2 id="modal-title" class="modal-title"></h2>
+        <p id="modal-desc" class="modal-desc"></p>
+        <a id="modal-link" href="#" target="_blank" rel="noopener" class="modal-link-btn">
+          Visit Website <i class="fa-solid fa-arrow-up-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#hero" class="footer-logo">'Arief Asyraf</a>
+    <span class="footer-copy">Designing with empathy, building with precision.</span>
+    <ul class="footer-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
